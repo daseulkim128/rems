@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="testSql">
+
+	<insert id="pushData" parameterType="hashmap">
+		INSERT INTO TEST_VAL(
+			val1
+			, val2
+			, dt
+		) values(
+			REPLACE(UUID(), '-', '')
+			, #{val2}
+			, NOW()
+		)
+	</insert>
+</mapper>

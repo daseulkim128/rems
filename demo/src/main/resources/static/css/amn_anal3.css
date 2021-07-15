@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'logo';
+    
+    src: url('./fonts/Reef.otf');
+    src: url('./fonts/Reef.otf') format('embedded-opentype'),
+    url('./fonts/Reef.otf') format('opentype');
+   }
+
+@font-face {
+ font-family: 'Noto';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Black.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Black.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Black.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoB';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoR';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoM';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoL';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Light.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Light.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Light.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoDL';
+  font-style: 700;
+ font-weight:700;
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.woff') format('woff');
+}
+
+input,textarea{outline: none;}
+*{margin:0; padding: 0; position: relative; box-sizing:border-box; list-style: none; font-family: 'NotoR', sans-serif;}
+
+.section{display: flex;}
+
+.section .menu-bar {width: 200px; height: 100vh; display: absolute; z-index: 20; background-color: #f4f4f4; }
+
+.section .content-wrap {width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; margin-top: 7%;}
+
+.section .content-wrap .content{width: 90%; height: 100%; display: flex; flex-direction: column;}
+.section .content-wrap .content .tab-bar{width: 100%; height: 50px;}
+.section .content-wrap .content .search-bar{width: 100%; height: 50px;}
+.section .content-wrap .content .search-bar .container-fluid{display: flex; justify-content: center;}
+
+.section .content-wrap .content .cont{display : flex; flex-direction: column;}
+.section .content-wrap .content .cont .top{display : flex; flex-direction: row; height: 350px; width: 100%;}
+.section .content-wrap .content .cont .top .chart-wrap{flex: 1; display: flex; align-items: center;}
+.section .content-wrap .content .cont .top .table-wrap{flex: 2; display: flex; align-items: center;}
+
+.section .content-wrap .content .cont .bottom{display : flex; flex-direction: row; height: 350px; width: 100%;}
+.section .content-wrap .content .cont .bottom .chart-wrap{flex: 1; display: flex; align-items: center;}
+.section .content-wrap .content .cont .bottom .table-wrap{flex: 2; display: flex; align-items: center;}
