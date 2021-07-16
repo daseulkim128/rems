@@ -61,7 +61,9 @@ input,textarea{outline: none;}
 .section .content-wrap .content .cont .cont-item3{flex: 2; margin-left: 30px; border: 2px solid #bbbbbb; }
 .section .content-wrap .content .cont .cont-item4{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
 .section .content-wrap .content .cont .cont-item5{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
-.section .content-wrap .content .cont .title-wrap{height: 15%; background-color: #f4f4f4;}
-
+.section .content-wrap .content .cont .title-wrap{height: 15%; background-color: #f4f4f4; display: flex; flex-direction: row;}
+.section .content-wrap .content .cont .title-wrap .text1{flex: 1; display: flex; justify-content: flex-start;}
+.section .content-wrap .content .cont .title-wrap .text2{flex: 1; display: flex; justify-content: flex-end;}
+.section .content-wrap .content .cont .chart-wrap{width: 90%; height: 90%; display: flex; justify-content: center; align-items: center;}
 
 
