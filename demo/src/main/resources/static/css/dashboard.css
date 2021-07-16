@@ -53,19 +53,15 @@ input,textarea{outline: none;}
 
 .section .menu-bar {width: 200px; height: 100vh; display: absolute; z-index: 20; background-color: #f4f4f4; }
 
-.section .content-wrap {width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; margin-top: 7%;}
-
-.section .content-wrap .content{width: 90%; height: 100%; display: flex; flex-direction: column;}
-.section .content-wrap .content .tab-bar{width: 100%; height: 50px;}
-.section .content-wrap .content .search-bar{width: 100%; height: 50px;}
-.section .content-wrap .content .search-bar .container-fluid{display: flex; justify-content: center;}
-.section .content-wrap .content .search-bar .container-fluid .left{flex: 1; display: flex; justify-content:space-between;}
-.section .content-wrap .content .search-bar .container-fluid .left .search-time{flex: 1;  display: flex;}
-.section .content-wrap .content .search-bar .container-fluid .left .search-day{margin-left:30px; flex: 3;  display: flex;}
-.section .content-wrap .content .search-bar .container-fluid .left .search-day .text{flex: 2;}
-.section .content-wrap .content .search-bar .container-fluid .left .search-day .form-select{flex: 2;}
-.section .content-wrap .content .search-bar .container-fluid .right{flex: 1; display: flex; justify-content: flex-end;}
-.section .content-wrap .content .search-bar .container-fluid .right .btn{margin-left: 10px;}
+.section .content-wrap {width: 100%; height: auto; display: flex; flex-direction: column; align-items: center;}
+.section .content-wrap .content{width: 90%; height: auto; display: flex; flex-direction: column; margin-top:40px;}
+.section .content-wrap .content .cont{display: flex; flex-direction: row; margin-bottom: 3%; height: 300px;}
+.section .content-wrap .content .cont .cont-item{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb;}
+.section .content-wrap .content .cont .cont-item2{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
+.section .content-wrap .content .cont .cont-item3{flex: 2; margin-left: 30px; border: 2px solid #bbbbbb; }
+.section .content-wrap .content .cont .cont-item4{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
+.section .content-wrap .content .cont .cont-item5{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
+.section .content-wrap .content .cont .title-wrap{height: 15%; background-color: #f4f4f4;}
 
 
-.section .content-wrap .content .chart-wrap {width: 100%; height: 350px;}
+

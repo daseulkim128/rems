@@ -1,5 +1,5 @@
 $(function() {
-	var home = {
+	var amn_anal2 = {
 		init : function() {
 			this.setEvent();
 			
@@ -7,15 +7,9 @@ $(function() {
 		},
 		setEvent : function() {			
 			
-//			$('.nav-link').on('click',function(){
-//				var this_ = $(this);
-//				$('.nav-link').removeClass('active');
-//				this_.addClass('active');
-//			});
-			
 		}
 	};
-	home.init();
+	amn_anal2.init();
 });
 
 

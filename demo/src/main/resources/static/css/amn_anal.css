@@ -68,4 +68,7 @@ input,textarea{outline: none;}
 .section .content-wrap .content .search-bar .container-fluid .right .btn{margin-left: 10px;}
 
 
-.section .content-wrap .content .chart-wrap {width: 100%; height: 350px;}
+.section .content-wrap .content .chart-wrap {margin-top: 30px; width: 100%; height: 350px;}
+
+.section .content-wrap .content .table-wrap {margin-top: 30px;}
+

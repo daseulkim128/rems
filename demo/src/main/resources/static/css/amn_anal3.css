@@ -63,8 +63,8 @@ input,textarea{outline: none;}
 .section .content-wrap .content .cont{display : flex; flex-direction: column;}
 .section .content-wrap .content .cont .top{display : flex; flex-direction: row; height: 350px; width: 100%;}
 .section .content-wrap .content .cont .top .chart-wrap{flex: 1; display: flex; align-items: center;}
-.section .content-wrap .content .cont .top .table-wrap{flex: 2; display: flex; align-items: center;}
+.section .content-wrap .content .cont .top .table-wrap{flex: 2; display: flex; align-items: center; margin-left:50px;}
 
 .section .content-wrap .content .cont .bottom{display : flex; flex-direction: row; height: 350px; width: 100%;}
 .section .content-wrap .content .cont .bottom .chart-wrap{flex: 1; display: flex; align-items: center;}
-.section .content-wrap .content .cont .bottom .table-wrap{flex: 2; display: flex; align-items: center;}
+.section .content-wrap .content .cont .bottom .table-wrap{flex: 2; display: flex; align-items: center; margin-left:50px;}
