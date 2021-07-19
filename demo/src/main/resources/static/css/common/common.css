@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'logo';
+    
+    src: url('./fonts/Reef.otf');
+    src: url('./fonts/Reef.otf') format('embedded-opentype'),
+    url('./fonts/Reef.otf') format('opentype');
+   }
+
+@font-face {
+ font-family: 'Noto';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Black.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Black.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Black.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoB';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoR';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoM';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoL';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Light.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Light.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Light.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoDL';
+  font-style: 700;
+ font-weight:700;
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.woff') format('woff');
+}
+
+*{margin:0; padding: 0; position: relative; box-sizing:border-box; list-style: none; font-family: 'NotoR', sans-serif;}
+
+.menu-bar {width: 200px;  display: flex; z-index: 20; background-color: #f4f4f4; min-height:100vh; height: 100%;}
+.menu-bar .nav{width: 100%; margin-top: 20%;}
+.menu-bar .nav .nav-item{height: 50px; }
+.menu-bar .nav .nav-item .nav-link{height: 100%; display: flex; align-items: center; color: #333; padding-left: 30px; transition: 0.5s;}
+.menu-bar .nav .nav-item .nav-link:before{width: 0px; height: 100%; position: absolute; left: 0; top: 0; content: ''; background-color: #333; transition: 0.5s;}
+.menu-bar .nav .nav-item .nav-link:hover{padding-left: 50px; transition: 0.5s;}
+.menu-bar .nav .nav-item .nav-link:hover:before{width: 5px; transition: 0.5s;}
+.menu-bar .nav .nav-item .nav-link.active{padding-left: 50px;}
+.menu-bar .nav .nav-item .nav-link.active:before{width: 5px;}
+.menu-bar a{font-decoration: none;}
+
+
+.section{display: flex; }
+
+.section .wrapper{width: 100%; display: flex; flex-direction: column; align-items: center;}
+.section .wrapper .header-wrapper{width: 100%; display: flex; justify-content: center; height: 60px; margin-top: 30px; }
+.section .wrapper .header{width: 95%; height: 50px; display: flex;}
+.section .wrapper .header .left{flex: 1;}
+.section .wrapper .header .left .logo{font-size: 30px; font-weight: bold; font-family: 'NotoR'}
+.section .wrapper .header .right{flex : 1; display: flex; justify-content: flex-end; align-items: center;}
+.section .wrapper .header .right .name{}
+.section .wrapper .header .right .form-select{margin-left: 30px; width: 150px;}
+.section .wrapper .header .right .btn{margin-left: 30px;}
+
+.section .wrapper .content-wrap{width: 100%; }
+.section .wrapper .content-wrap .content{width: 95%; display: flex; flex-direction: column; margin: 0 auto; margin-top: 2%;}
+
+.search-day1 .col-auto{align-items: center; display: flex;}
+.search-day1 .col-auto label{margin-left: 20px; margin-right: 8px;}
+.search-day1 .date-picker-div{width: 150px; flex: unset;}
+.search-day2 .col-auto{align-items: center; display: flex;}
+.search-day2 .col-auto label{margin-left: 8px; margin-right: 8px;}
+.search-day2 .date-picker-div{width: 150px; flex: unset;}
+.search-calendar{position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); cursor: pointer;}
+
+
+.data-board.w100 div.dataTables_wrapper{width: 100%;}
+
+.data-tables .dt-buttons{width: 0; height: 0; overflow: hidden;}
+.data-tables-bottom{width: 100%; display: flex; justify-content: space-between; margin-top: 10px;}
+

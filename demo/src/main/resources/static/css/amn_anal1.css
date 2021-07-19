@@ -46,7 +46,20 @@
  url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.woff') format('woff');
 }
 
+input,textarea{outline: none;}
 *{margin:0; padding: 0; position: relative; box-sizing:border-box; list-style: none; font-family: 'NotoR', sans-serif;}
 
-.menu-bar {width: 200px; height: 100vh; display: absolute; z-index: 20; background-color: #f4f4f4; }
-.menu-bar a{font-decoration: none;}
+.section .wrapper .content-wrap .content .tab-bar{width: 100%; height: 50px;}
+.section .wrapper .content-wrap .content .search-bar{width: 100%; height: 50px;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid{display: flex; justify-content: center;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid .left{flex: 1; display: flex; justify-content:space-between;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid .left .search-time{flex: 1;  display: flex;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid .left .search-day1{flex: 3;  display: flex;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid .left .search-day2{flex: 3;  display: flex;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid .right{flex: 1; display: flex; justify-content: flex-end;}
+.section .wrapper .content-wrap .content .search-bar .container-fluid .right .btn{margin-left: 10px;}
+
+
+.section .content-wrap .content .chart-wrap {margin-top: 30px; width: 100%; height: 350px;}
+
+.section .content-wrap .content .table-wrap {margin-top: 30px;}

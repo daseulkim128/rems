@@ -3,7 +3,11 @@ $(function() {
 		init : function() {
 			this.setEvent();
 			
+			common.setCalendar('stDate','stDate','endDate','endDate','HalfYear');
+			common.setTableOption('myTable')
+			
 			setChart();
+			
 		},
 		setEvent : function() {			
 			

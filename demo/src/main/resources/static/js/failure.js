@@ -1,19 +1,17 @@
 $(function() {
-	var amn_info4 = {
+	var failure = {
 		init : function() {
 			this.setEvent();
 			
 			common.setCalendar('stDate1','stDate1','endDate','endDate','HalfYear');
 			common.setTableOption('myTable')
 			
-			setChart();
-			
 		},
 		setEvent : function() {			
 			
 		}
 	};
-	amn_info4.init();
+	failure.init();
 });
 
 
@@ -60,3 +58,4 @@ function setChart(){
 		  }
 		});
 }
+

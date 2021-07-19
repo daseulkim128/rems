@@ -1,21 +1,20 @@
 $(function() {
-	var home = {
+	var amn_anal1 = {
 		init : function() {
 			this.setEvent();
 			
+			common.setCalendar('stDate1','stDate1','endDate','endDate','HalfYear');
+			common.setCalendar('stDate2','stDate2','endDate2','endDate2','HalfYear');
+			common.setTableOption('myTable')
+			
 			setChart();
+			
 		},
 		setEvent : function() {			
 			
-//			$('.nav-link').on('click',function(){
-//				var this_ = $(this);
-//				$('.nav-link').removeClass('active');
-//				this_.addClass('active');
-//			});
-			
 		}
 	};
-	home.init();
+	amn_anal1.init();
 });
 
 

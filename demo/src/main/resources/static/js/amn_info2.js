@@ -1,16 +1,19 @@
 $(function() {
-	var amn_info1 = {
+	var amn_info2 = {
 		init : function() {
 			this.setEvent();
 			
+			common.setCalendar('stDate2','stDate2','endDate2','endDate2','HalfYear');
+			common.setTableOption('myTable')
+			
 			setChart();
+			
 		},
 		setEvent : function() {			
 			
-			
 		}
 	};
-	amn_info1.init();
+	amn_info2.init();
 });
 
 

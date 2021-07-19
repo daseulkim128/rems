@@ -1,115 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <meta charset="UTF-8">
 <title>대쉬보드</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css" >
+		<link rel="stylesheet" type="text/css" href="css/common/common.css" >
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  	<script src="js/common/common.js" ></script>
  	<script src="js/dashboard.js" ></script>
-  
 </head>
 <body>
 
 <div class="section">
-	<div class="menu-bar">
-		<ul class="nav">
-			<li class="nav-item">
-	    		<a class="nav-link active" aria-current="page" href="dashboard.html" id="nav1">대쉬보드</a>
-	  		</li>
-	  		<li class="nav-item">
-	    		<a class="nav-link" href="amn_anal1.html" id="nav2">발전분석</a>
-	  		</li>
-	  		<li class="nav-item">
-	    		<a class="nav-link" href="amn_info1.html" id="nav3">발전정보</a>
-	  		</li>
-	  		<li class="nav-item">
-	    		<a class="nav-link" href="report1.html" id="nav4">보고서</a>
-	  		</li>
-	  		<li class="nav-item">
-	    		<a class="nav-link" href="failure.html" id="nav5">장애정보</a>
-	  		</li>
-		</ul>
-	</div>
-
-	<div class="content-wrap">
-		<div class="content">
-			<div class="cont">
-				<div class="cont-item">
-					<div class="title-wrap">
-						<span class="text1">발전소명</span>
-						<span class="text2">설치용량</span>
+	
+	<div th:include="common/lnb.html"></div>
+	
+	<div class="wrapper">
+		
+		<div class="header-wrapper" th:include="common/header.html"></div>
+		
+		<div class="content-wrap">
+			<div class="content">
+				<div class="cont">
+					<div class="cont-item">
+						<div class="title-wrap">
+							<span class="text1">발전소명</span>
+							<span class="text2">설치용량</span>
+						</div>
+						<div class="text-wrap">
+						</div>
 					</div>
-					<div class="text-wrap">
+					<div class="cont-item">
+						<div class="title-wrap">
+							<span class="text1">현재출력</span>
+							<span class="text2">19.92 kW</span>
+						</div>
+						<div class="chart-wrap"></div>
 					</div>
-				</div>
-				<div class="cont-item">
-					<div class="title-wrap">
-						<span class="text1">현재출력</span>
-						<span class="text2">19.92 kW</span>
-					</div>
-					<div class="chart-wrap"></div>
-				</div>
-				<div class="cont-item">
-					<div class="title-wrap">
-						<span class="text1">발전현황</span>
-						<span class="text2">19.92 kW</span>
-					</div>
-					<div class="text-wrap"></div>
-				</div>
-			</div>
-			<div class="cont">
-				<div class="cont-item2">
-					<div class="title-wrap">
-						<span class="text1">시간별 발전량</span>
-					</div>
-					<div class="chart-wrap">
+					<div class="cont-item">
+						<div class="title-wrap">
+							<span class="text1">발전현황</span>
+							<span class="text2">19.92 kW</span>
+						</div>
+						<div class="text-wrap"></div>
 					</div>
 				</div>
-				<div class="cont-item2">
-					<div class="title-wrap">
-						<span class="text1">출력정보</span>
+				<div class="cont">
+					<div class="cont-item2">
+						<div class="title-wrap">
+							<span class="text1">시간별 발전량</span>
+						</div>
+						<div class="chart-wrap">
+							 <canvas id="myChart2" style="width:100%; height:100%;"></canvas>
+						</div>
 					</div>
-					<div class="chart-wrap">
-						 <canvas id="myChart" style="width:100%; height:100%;"></canvas>
+					<div class="cont-item2">
+						<div class="title-wrap">
+							<span class="text1">출력정보</span>
+						</div>
+						<div class="chart-wrap">
+							 <canvas id="myChart3" style="width:100%; height:100%;"></canvas>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="cont">
-				<div class="cont-item3">
-					<div class="title-wrap">
-						<span class="text1">일일 발전량</span>
+				<div class="cont">
+					<div class="cont-item3">
+						<div class="title-wrap">
+							<span class="text1">일일 발전량</span>
+						</div>
+						<div class="chart-wrap">
+							<canvas id="myChart4" style="width:100%; height:100%;"></canvas>
+						</div>
 					</div>
-					<div class="chart-wrap"></div>
+					<div class="cont-item4">
+						<div class="title-wrap">
+							<span class="text1">Co2 저감량</span>
+						</div>
+						<div class="chart-wrap"></div>
+					</div>
 				</div>
-				<div class="cont-item4">
-					<div class="title-wrap">
-						<span class="text1">Co2 저감량</span>
+				<div class="cont">
+					<div class="cont-item5">
+						<div class="title-wrap">
+							<span class="text1">인버터 출력상태</span>
+						</div>
+						<div class="chart-wrap">
+							<table class="table table-hover">
+							  <thead>
+							    <tr>
+							      <th scope="col">#</th>
+							      <th scope="col">First</th>
+							      <th scope="col">Last</th>
+							      <th scope="col">Handle</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>Jacob</td>
+							      <td>Thornton</td>
+							      <td>@fat</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td colspan="2">Larry the Bird</td>
+							      <td>@twitter</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">4</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							    </tr>
+							  </tbody>
+							</table>					
+						</div>
 					</div>
-					<div class="chart-wrap"></div>
 				</div>
-			</div>
-			<div class="cont">
-				<div class="cont-item5">
-					<div class="title-wrap">
-						<span class="text1">인버터 출력상태</span>
+				<div class="cont">
+					<div class="cont-item5">
+						<div class="title-wrap">
+							<span class="text1">장애정보</span>
+						</div>
+						<div class="chart-wrap">
+							<table class="table table-hover">
+							  <thead>
+							    <tr>
+							      <th scope="col">#</th>
+							      <th scope="col">First</th>
+							      <th scope="col">Last</th>
+							      <th scope="col">Handle</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>Jacob</td>
+							      <td>Thornton</td>
+							      <td>@fat</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td colspan="2">Larry the Bird</td>
+							      <td>@twitter</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">4</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">5</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							    </tr>
+							  </tbody>
+							</table>		
+						</div>				
 					</div>
-					<div class="chart-wrap"></div>
-				</div>
-			</div>
-			<div class="cont">
-				<div class="cont-item5">
-					<div class="title-wrap">
-						<span class="text1">장애정보</span>
-					</div>
-					<div class="chart-wrap"></div>				
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
+
 </div>
 
 </body>

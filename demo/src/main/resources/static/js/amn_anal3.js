@@ -1,21 +1,20 @@
 $(function() {
-	var home = {
+	var amn_anal3 = {
 		init : function() {
 			this.setEvent();
 			
+			common.setTableOption('myTable1')
+			common.setTableOption('myTable2')
+			
 			setChart();
+			
 		},
 		setEvent : function() {			
 			
-//			$('.nav-link').on('click',function(){
-//				var this_ = $(this);
-//				$('.nav-link').removeClass('active');
-//				this_.addClass('active');
-//			});
 			
 		}
 	};
-	home.init();
+	amn_anal3.init();
 });
 
 
