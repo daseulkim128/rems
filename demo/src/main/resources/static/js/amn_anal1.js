@@ -5,7 +5,7 @@ $(function() {
 			
 			common.setCalendar('stDate1','stDate1','endDate','endDate','HalfYear');
 			common.setCalendar('stDate2','stDate2','endDate2','endDate2','HalfYear');
-			common.setTableOption('myTable')
+			common.setTableOption('myTable');
 			
 			setChart();
 			

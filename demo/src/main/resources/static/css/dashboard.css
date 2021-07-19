@@ -50,14 +50,14 @@ input,textarea{outline: none;}R
 *{margin:0; padding: 0; position: relative; box-sizing:border-box; list-style: none; font-family: 'NotoR', sans-serif;}
 
 .section .wrapper .content-wrap .content .cont{display: flex; flex-direction: row; margin-bottom: 3%; height: 300px;}
+.section .wrapper .content-wrap .content .cont.h400{height: 330px;}
 .section .wrapper .content-wrap .content .cont .cont-item{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb;}
-.section .wrapper .content-wrap .content .cont .cont-item2{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
-.section .wrapper .content-wrap .content .cont .cont-item3{flex: 2; margin-left: 30px; border: 2px solid #bbbbbb; }
-.section .wrapper .content-wrap .content .cont .cont-item4{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
-.section .wrapper .content-wrap .content .cont .cont-item5{flex: 1; margin-left: 30px; border: 2px solid #bbbbbb; }
+.section .wrapper .content-wrap .content .cont .cont-item:first-child{margin-left: 0;}
+.section .wrapper .content-wrap .content .cont .cont-item.flex-2{flex: 2;}
 .section .wrapper .content-wrap .content .cont .title-wrap{height: 15%; background-color: #f4f4f4; display: flex; flex-direction: row;}
-.section .wrapper .content-wrap .content .cont .title-wrap .text1{flex: 1; display: flex; justify-content: flex-start;}
-.section .wrapper .content-wrap .content .cont .title-wrap .text2{flex: 1; display: flex; justify-content: flex-end;}
-.section .wrapper .content-wrap .content .cont .chart-wrap{width: 90%; height: 90%; display: flex; justify-content: center; align-items: center;}
+.section .wrapper .content-wrap .content .cont .title-wrap .text1{flex: 1; display: flex; justify-content: flex-start; margin-left: 20px; align-items: center; font-size: 17px; font-weight: bold; font-family: 'NotoR'}
+.section .wrapper .content-wrap .content .cont .title-wrap .text2{flex: 1; display: flex; justify-content: flex-end; margin-right: 20px; align-items: center; font-size: 17px; font-weight: bold; font-family: 'NotoR'}
+.section .wrapper .content-wrap .content .cont .chart-wrap{margin: 0 auto; width: 96%; height: 90%; display: flex; justify-content: center; align-items: center;}
+.section .wrapper .content-wrap .content .cont .table-wrap{margin: 0 auto; width: 96%; height: 90%; display: flex; justify-content: center; margin-top: 1%;}
 
 

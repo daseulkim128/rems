@@ -3,6 +3,9 @@ $(function() {
 		init : function() {
 			this.setEvent();
 			
+			common.setTableOption('myTable1');
+			common.setTableOption('myTable2');
+			
 			setChart();
 		},
 		setEvent : function() {			
