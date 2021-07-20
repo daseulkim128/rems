@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'logo';
+    
+    src: url('./fonts/Reef.otf');
+    src: url('./fonts/Reef.otf') format('embedded-opentype'),
+    url('./fonts/Reef.otf') format('opentype');
+   }
+
+@font-face {
+ font-family: 'Noto';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Black.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Black.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Black.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoB';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Bold.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoR';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Regular.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoM';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Medium.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoL';
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Light.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-Light.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-Light.woff') format('woff');
+}
+@font-face {
+ font-family: 'NotoDL';
+  font-style: 700;
+ font-weight:700;
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.eot');
+ src: url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.eot') format('embedded-opentype'),
+ url('./fonts/NotosansCJK/NotoSansCJKkr-DemiLight.woff') format('woff');
+}
+
+input,textarea{outline: none;}
+*{margin:0; padding: 0; position: relative; box-sizing:border-box; list-style: none; font-family: 'NotoR', sans-serif;}
+
+
+.section .content-wrap .content .search-bar{width: 100%; height: 50px;}
+.section .content-wrap .content .search-bar .container-fluid{display: flex; justify-content: center;}
+.section .content-wrap .content .search-bar .container-fluid .left{flex: 2; display: flex;}
+.section .content-wrap .content .search-bar .container-fluid .left .form-select{width: 219px; margin-right: 20px;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-type{display: flex; flex-direction: row;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-type .text{align-items: center; display: flex;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-status{display: flex; flex-direction: row; margin-left: 20px;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-status .text{align-items: center; display: flex; margin-right: 10px;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-member{display: flex; flex-direction: row; margin-left: 20px;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-member .text{align-items: center; display: flex; margin-right: 10px;}
+.section .content-wrap .content .search-bar .container-fluid .right{flex: 1; display: flex; justify-content: flex-end;}
+.section .content-wrap .content .search-bar .container-fluid .right .btn{margin-left: 10px;}
+
+.section .content-wrap .content .table-wrap {margin-top: 30px; width: 100%; }
