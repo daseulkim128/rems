@@ -40,12 +40,31 @@ $(function() {
 
 function addInvertHtml(obj){
 	
-	var qs		='<tr class="invertor-tr">'
+	/*var qs		='<tr class="invertor-tr">'
 				+'<th class="table-th">인버터</th>'
 				+'	<td colspan="1">'
 				+'		<div class="input-group">'
 				+'			<input class="form-control" type="text" aria-label="default input example">'
 				+'			<button class="btn btn-sm btn-dark pm-buttons" type="button" name="delInvertBtn">-</button>'
+				+'		</div>'
+				+'	</td>'
+				+'</tr>';*/
+	
+	var qs		='<tr class="invertor-tr">'
+				+'<th class="table-th">인버터</th>'
+				+'	<td colspan="1">'
+				+'		<div class="input-group">'
+				+'			<div class="left">'
+    			+'				<span>식별 ID :</span>'
+	    		+'				<input class="form-control" type="text" aria-label="default input example">'
+	    		+'			</div>'
+	    		+'			<div class="center">'
+    			+'				<span>모델명 :</span>'
+	    		+'				<input class="form-control" type="text" aria-label="default input example">'
+	    		+'			</div>'
+	    		+'			<div class="right">'
+	    		+'				<button class="btn btn-sm btn-dark pm-buttons" type="button" name="delInvertBtn">-</button>'	
+	    		+'			</div>'
 				+'		</div>'
 				+'	</td>'
 				+'</tr>';

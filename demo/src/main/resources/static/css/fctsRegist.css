@@ -66,11 +66,27 @@ input,textarea{outline: none;}
 .section .content-wrap .content .table-wrap .accordion .accordion-header .center .form-check .form-control{text-align: center;}
 .section .content-wrap .content .table-wrap .accordion .accordion-header .right{flex:1; display: flex; justify-content: flex-end; align-items: center;}
 .section .content-wrap .content .table-wrap .accordion .accordion-body{padding: 0;}
+.section .content-wrap .content .table-wrap .accordion .invertor-body .input-group{display: flex; flex-direction: row}
+.section .content-wrap .content .table-wrap .accordion .invertor-body .input-group .left{flex: 1; display: flex; flex-direction: row; align-items: center;}
+.section .content-wrap .content .table-wrap .accordion .invertor-body .input-group .center{flex: 1; display: flex; flex-direction: row; align-items: center;}
+.section .content-wrap .content .table-wrap .accordion .invertor-body .input-group .right{flex: 1; display: flex; flex-direction: row; align-items: center; justify-content: flex-end;}
+.section .content-wrap .content .table-wrap .accordion .invertor-body .input-group span{text-align: center;}
+.section .content-wrap .content .table-wrap .accordion .invertor-body .input-group .form-control{width: 300px; margin-left: 20px;}
+
+.section .content-wrap .content .btn-div{display: flex; justify-content: center; margin-bottom: 0;}
+.section .content-wrap .content .btn-div .btn{margin-right: 10px;}
 
 .bd-bottom{border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
 .bd-bottom .accordion-button{width: 60px; background-color: #fff !important; box-shadow: none !important; margin-left: 10px;}
 .bd-bottom .pm-buttons{width: 30px; height: 30px; margin-left: 10px; font-weight: 600; font-size: 22px; display: flex; justify-content: center; align-items: center;}
 .fcts-info .accordion-item{margin-top: 20px; border-top: 1px solid rgba(0, 0, 0, 0.1) !important; margin-bottom: 80px;}
+.fcts-info .accordion-item:last-child{margin-bottom: 20px;}
 .table-invertor{border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;} 
 .invertor-header{width: 100%; display: flex; justify-content: space-between;}
 .invertor-header span{display: flex; align-items: center;}
+
+.modal .modal-body .body-top{display: flex; flex-direction: column;}
+.modal .modal-body .body-top .btn-wrap{margin-top: 10px; display: flex; justify-content: center; }
+
+.modal .modal-body .body-bottom {margin-top: 30px; max-height:206px; overflow-y: auto; }
+.modal .modal-body .body-bottom table{text-align: center;}

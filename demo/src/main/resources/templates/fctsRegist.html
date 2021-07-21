@@ -39,7 +39,7 @@
 					<div class="text-wrap">
 						<div class="left">
 							<div class="bar"></div>
-							<span class="text">회원 기본정보</span>
+							<span class="text">업체 기본정보</span>
 						</div>
 					</div>
 					<table class="table table-bordered align-middle">
@@ -52,48 +52,35 @@
 						<tbody>
 						   <tr>
 						     <th class="table-th">회원ID</th>
-						     <td><input class="form-control" type="text" aria-label="default input example"></td>
-						     <th class="table-th">회원상태</th>
 						     <td>
-						     	<select class="form-select">
-								  <option value="1">이용중</option>
-								</select>
+						     	<div class="input-group">
+							     	<input class="form-control" type="text" aria-label="default input example">
+									<button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">찾기</button>
+						     	</div>
+						     </td>
+						     <th class="table-th">이름</th>
+						     <td>
+						     	
 						     </td>
 						   </tr>
 						   <tr>
-						     <th class="table-th">사업자등록번호</th>
-						     <td><input class="form-control" type="text" aria-label="default input example"></td>
-						     <th class="table-th">상호명(법인명)</th>
-						     <td><input class="form-control" type="text" aria-label="default input example"></td>
+						   	 <th class="table-th">사업자등록번호</th>
+						     <td colspan="3"><input class="form-control" type="text" aria-label="default input example"></td>
 						   </tr>
 						   <tr>
-						    <th class="table-th">대표자명</th>
+						    <th class="table-th">상호명(법인명)</th>
 						    <td><input class="form-control" type="text" aria-label="default input example"></td>
-						    <th class="table-th">휴대전화</th>
-						    <td>
-								<div class="input-group">
-							     	<select class="form-select">
-									  <option value="1">010</option>
-									  <option value="1">011</option>
-									  <option value="1">019</option>
-									  <option value="1">017</option>
-									</select>
-							     	<label class="input-group-text">-</label>
-							     	<input class="form-control" type="text" aria-label="default input example">
-							     	<label class="input-group-text">-</label>
-							     	<input class="form-control" type="text" aria-label="default input example">
-						     	</div>
-							</td>
+						    <th class="table-th">대표자명</th>
+						     <td><input class="form-control" type="text" aria-label="default input example"></td>
 						   </tr>
 						   <tr>
-						     <th class="table-th">이메일</th>
-						     <td colspan="5"><input class="form-control" type="text" aria-label="default input example"></td>
+						     <th class="table-th">소재지</th>
+						     <td colspan="3"><input class="form-control" type="text" aria-label="default input example"></td>
 						   </tr>
 						 </tbody>
 					</table>
 				</div>
 				<div class="fcts-info">
-				
 					<div class="table-wrap">
 						<div class="text-wrap">
 							<div class="left">
@@ -134,11 +121,12 @@
 						        	</colgroup>
 									<tbody>
 										<tr>
-									     <th class="table-th">발전소ID</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
-									    
+									     <th class="table-th">설비ID</th>
+									     <td><input class="form-control" type="text" aria-label="default input example"></td>
+									    <th class="table-th">설비관리번호</th>
+									     <td><input class="form-control" type="text" aria-label="default input example"></td>
 										 <th class="table-th">대표발전소 여부</th>
-									     <td colspan="2">
+									     <td>
 											<select class="form-select">
 											  <option value="1">Y</option>
 											  <option value="1">N</option>
@@ -147,20 +135,20 @@
 									   </tr>
 									   <tr>
 									     <th class="table-th">용량(kW)</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
+									     <td><input class="form-control" type="text" aria-label="default input example"></td>
 									     <th class="table-th">에너지원</th>
-									     <td colspan="2">
+									     <td>
 									     	<select class="form-select">
 											  <option value="1">태양광</option>
 											  <option value="1">ESS</option>
 											</select>
 									     </td>
+									     <th class="table-th">지역</th>
+									     <td><input class="form-control" type="text" aria-label="default input example"></td>
 									   </tr>
 									   <tr>
-									   	<th class="table-th">지역</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
 									     <th class="table-th">주소</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
+									     <td colspan="5"><input class="form-control" type="text" aria-label="default input example"></td>
 									   </tr>
 									 </tbody>
 								</table>
@@ -178,17 +166,24 @@
 													<span>인버터 관리</span>
 													<button class="btn btn-sm btn-outline-dark pm-buttons" type="button" name="addInvertBtn">+</button>
 												</div>
-											
-												
 											</th>
 										</tr>
 						        	</thead>
-									<tbody name="invertor-body">
+									<tbody class="invertor-body" name="invertor-body">
 									   <tr>
 									    <th class="table-th">인버터</th>
 									    <td colspan="1">
 									    	<div class="input-group">
-									    		<input class="form-control" type="text" aria-label="default input example">
+									    		<div class="left">
+									    			<span>식별 ID :</span>
+										    		<input class="form-control" type="text" aria-label="default input example">
+									    		</div>
+									    		<div class="center">
+									    			<span>모델명 :</span>
+										    		<input class="form-control" type="text" aria-label="default input example">
+									    		</div>
+												<div class="right">
+												</div>
 									    	</div>
 										</td>
 									   </tr>
@@ -197,16 +192,99 @@
 						      </div>
 						    </div>
 						  </div>
-						  
-						  
 						</div>
 					</div>
-					
 				</div>
+				<div class="btn-div">
+					<button class="btn btn-outline-secondary" type="button" name="registBtn">저장</button>
+					<button class="btn btn-secondary" type="button" name="cancelBtn">취소</button>
+				</div>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">회원찾기</h5>
+				        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				      </div>
+				      <div class="modal-body">
+				      	<div class="body-top">
+							<table class="table table-bordered align-middle mb-0">
+						     	<colgroup>
+						     		<col width="30%;" />
+						     	</colgroup>
+								<tbody>
+									<tr>
+								     <th class="table-th">회원ID</th>
+								     <td><input class="form-control" type="text" aria-label="default input example"></td>
+								   </tr>
+								   <tr>
+								     <th class="table-th">이름</th>
+								     <td><input class="form-control" type="text" aria-label="default input example"></td>
+								   </tr>
+								 </tbody>
+							 </table>		      	
+							<div class="btn-wrap">
+								 <button class="btn btn-outline-secondary" type="button">검색</button>
+							</div>
+				      	</div>
+				      	<div class="body-bottom">
+				      		<table class="table table-bordered align-middle mb-0">
+					        	<colgroup>
+					        		<col width="40%;" />
+					        		<col width="40%;" />
+					        		<col width="20%;" />
+					        	</colgroup>
+					        	<thead>
+									<tr>
+										<th class="">회원ID</th>
+										<th class="">이름</th>
+										<th class="">선택</th>
+									</tr>
+						        </thead>
+								<tbody>
+									<tr>
+								     <td>dskim</td>
+								     <td>김다슬</td>
+								     <td><button class="btn btn-light" type="button">선택</button></td>
+								   </tr>
+								   <tr>
+								     <td>dskim</td>
+								     <td>김다슬</td>
+								     <td><button class="btn btn-light" type="button">선택</button></td>
+								   </tr>
+								   <tr>
+								     <td>dskim</td>
+								     <td>김다슬</td>
+								     <td><button class="btn btn-light" type="button">선택</button></td>
+								   </tr>
+								   <tr>
+								     <td>dskim</td>
+								     <td>김다슬</td>
+								     <td><button class="btn btn-light" type="button">선택</button></td>
+								   </tr>
+								   <tr>
+								     <td>dskim</td>
+								     <td>김다슬</td>
+								     <td><button class="btn btn-light" type="button">선택</button></td>
+								   </tr>
+								 </tbody>
+							  </table>		
+				      	</div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary">확인</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
 			</div>
 		</div>
 	</div>	
 </div>
+
 
 </body>
 </html>

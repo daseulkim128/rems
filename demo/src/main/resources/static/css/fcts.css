@@ -56,6 +56,8 @@ input,textarea{outline: none;}
 .section .content-wrap .content .search-bar .container-fluid .left .form-select{width: 219px; margin-right: 20px;}
 .section .content-wrap .content .search-bar .container-fluid .left .search-type{display: flex; flex-direction: row;}
 .section .content-wrap .content .search-bar .container-fluid .left .search-type .text{align-items: center; display: flex;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-status{display: flex; flex-direction: row; margin-left: 20px;}
+.section .content-wrap .content .search-bar .container-fluid .left .search-status .text{align-items: center; display: flex; margin-right: 10px;}
 .section .content-wrap .content .search-bar .container-fluid .left .search-member{display: flex; flex-direction: row; margin-left: 20px;}
 .section .content-wrap .content .search-bar .container-fluid .left .search-member .text{align-items: center; display: flex; margin-right: 10px;}
 .section .content-wrap .content .search-bar .container-fluid .right{flex: 1; display: flex; justify-content: flex-end;}
