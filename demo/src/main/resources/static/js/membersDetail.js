@@ -1,13 +1,13 @@
 $(function() {
-	var membersRegist = {
+	var membersDetail = {
 		init : function() {
 			
 			this.setEvent();
 		},
 		setEvent : function() {			
 			
-			$('#registBtn').on('click',function(){
-				location.href = "membersDetail.html";
+			$('#modifyBtn').on('click',function(){
+				location.href = "membersModify.html";
 			});
 			
 			$('#cancelBtn').on('click',function(){
@@ -15,5 +15,5 @@ $(function() {
 			});
 		}
 	};
-	membersRegist.init();
+	membersDetail.init();
 });

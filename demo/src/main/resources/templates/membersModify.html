@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>회원관리</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="css/fctsDetail.css" >
+	<link rel="stylesheet" type="text/css" href="css/membersModify.css" >
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" >
 	<link rel="stylesheet" type="text/css" href="css/common/jquery-ui.css" >
 	<link rel="stylesheet" type="text/css" href="css/common/datatables.min.css" >
@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="js/dataTables/vfs_fonts.js"></script>
 	<script type="text/javascript" src="js/dataTables/buttons.html5.min.js"></script>	
  	<script src="js/common/common.js" ></script>
-	<script src="js/fctsDetail.js" ></script>
+	<script src="js/membersModify.js" ></script>
 </head>
 <body>
 
@@ -39,7 +39,7 @@
 					<div class="text-wrap">
 						<div class="left">
 							<div class="bar"></div>
-							<span class="text">업체 기본정보</span>
+							<span class="text">회원 기본정보</span>
 						</div>
 					</div>
 					<table class="table table-bordered align-middle">
@@ -52,51 +52,66 @@
 						<tbody>
 						   <tr>
 						     <th class="table-th">회원ID</th>
-						     <td>
+						     <td colspan="3">
+							     	<input class="form-control" type="text" aria-label="default input example">
 						     </td>
+						   </tr>
+						   <tr>
 						     <th class="table-th">이름</th>
-						     <td>
+						     <td colspan="3"><input class="form-control" type="text" aria-label="default input example"></td>
+						   </tr>
+						   <tr>
+						    <th class="table-th">연락처</th>
+						    <td>
+								<div class="input-group">
+							     	<select class="form-select">
+									  <option value="1">010</option>
+									  <option value="1">011</option>
+									  <option value="1">019</option>
+									  <option value="1">017</option>
+									</select>
+							     	<label class="input-group-text">-</label>
+							     	<input class="form-control" type="text" aria-label="default input example">
+							     	<label class="input-group-text">-</label>
+							     	<input class="form-control" type="text" aria-label="default input example">
+						     	</div>
+							</td>
+							 <th class="table-th">이메일</th>
+						     <td><input class="form-control" type="email" aria-label="default input example"></td>
+						   </tr>
+						   <tr>
+						     <th class="table-th">회원상태</th>
+						     <td colspan="3">
+						     	<select class="form-select">
+								  <option value="1">이용중</option>
+								</select>
 						     </td>
-						   </tr>
-						   <tr>
-						   	 <th class="table-th">사업자등록번호</th>
-						     <td colspan="3"></td>
-						   </tr>
-						   <tr>
-						    <th class="table-th">상호명(법인명)</th>
-						    <td></td>
-						    <th class="table-th">대표자명</th>
-						     <td></td>
-						   </tr>
-						   <tr>
-						     <th class="table-th">소재지</th>
-						     <td colspan="3"></td>
 						   </tr>
 						 </tbody>
 					</table>
 				</div>
-				<div class="fcts-info">
+				
+				<div class="com-info">
 					<div class="table-wrap">
 						<div class="text-wrap">
 							<div class="left">
 								<div class="bar"></div>
-								<span class="text">발전소 정보</span>
+								<span class="text">업체 정보</span>
 							</div>
 							<div class="right">
 							</div>
 						</div>
-						<div class="accordion" id="accordionExample">
-						  
-						</div>
 					</div>
 				</div>
-				<div class="btn-div">
-					<button class="btn btn-outline-secondary" type="button" id="modifyBtn">수정</button>
-					<button class="btn btn-secondary" type="button" id="cancelBtn">목록</button>
+				
+				<div class="btn-wrap">
+					<button class="btn btn-outline-secondary" type="button" id="modifyBtn">저장</button>
+					<button class="btn btn-secondary" type="button" id="cancelBtn">취소</button>
 				</div>
 			</div>
 		</div>
 	</div>	
 </div>
+
 </body>
 </html>
