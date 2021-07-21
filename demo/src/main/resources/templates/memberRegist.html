@@ -2,9 +2,9 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <meta charset="UTF-8">
-<title>회원관리</title>
+<title>회원목록</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="css/membersDetail.css" >
+	<link rel="stylesheet" type="text/css" href="css/memberRegist.css" >
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" >
 	<link rel="stylesheet" type="text/css" href="css/common/jquery-ui.css" >
 	<link rel="stylesheet" type="text/css" href="css/common/datatables.min.css" >
@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="js/dataTables/vfs_fonts.js"></script>
 	<script type="text/javascript" src="js/dataTables/buttons.html5.min.js"></script>	
  	<script src="js/common/common.js" ></script>
-	<script src="js/membersDetail.js" ></script>
+	<script src="js/memberRegist.js" ></script>
 </head>
 <body>
 
@@ -53,45 +53,53 @@
 						   <tr>
 						     <th class="table-th">회원ID</th>
 						     <td colspan="3">
-						     	<button class="btn btn-outline-secondary" type="button" id="resetBtn">비밀번호 초기화</button>
+						     	<div class="input-group"> 
+							     	<input id="MEM_ID" class="form-control" type="text" aria-label="default input example">
+						     		<button class="btn btn-outline-secondary" type="button">중복확인</button>
+						     	</div>
 						     </td>
 						   </tr>
 						   <tr>
 						     <th class="table-th">이름</th>
-						     <td colspan="3"></td>
+						     <td colspan="3">
+						     	<input id="MEM_NM" class="form-control" type="text" aria-label="default input example">
+						     </td>
 						   </tr>
 						   <tr>
 						    <th class="table-th">연락처</th>
 						    <td>
-								
+								<div class="input-group">
+							     	<select id="MEM_CONT1" class="form-select">
+									  <option value="010">010</option>
+									  <option value="011">011</option>
+									  <option value="017">017</option>
+									  <option value="019">019</option>
+									</select>
+							     	<label class="input-group-text">-</label>
+							     	<input id="MEM_CONT2" class="form-control" type="text" aria-label="default input example">
+							     	<label class="input-group-text">-</label>
+							     	<input id="MEM_CONT3" class="form-control" type="text" aria-label="default input example">
+						     	</div>
 							</td>
-							 <th class="table-th">이메일</th>
-						     <td></td>
+							<th class="table-th">이메일</th>
+						    <td>
+						     	<input id="MEM_EML" class="form-control" type="email" aria-label="default input example">
+						    </td>
 						   </tr>
 						   <tr>
-						     <th class="table-th">회원상태</th>
+						   	 <th class="table-th">회원상태</th>
 						     <td colspan="3">
-						     	
+						     	<select id="MEM_STAT" class="form-select">
+								  <option value="Y">이용중</option>
+								  <option value="N">해제</option>
+								</select>
 						     </td>
 						   </tr>
 						 </tbody>
 					</table>
 					<div class="btn-wrap">
-						<button class="btn btn-outline-secondary" type="button" id="modifyBtn">수정</button>
+						<button class="btn btn-outline-secondary" type="button" id="registBtn">저장</button>
 					   	<button class="btn btn-secondary" type="button" id="cancelBtn">취소</button>
-					</div>
-				</div>
-				
-				<div class="com-info">
-					<div class="table-wrap">
-						<div class="text-wrap">
-							<div class="left">
-								<div class="bar"></div>
-								<span class="text">업체 정보</span>
-							</div>
-							<div class="right">
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

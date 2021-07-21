@@ -14,6 +14,7 @@ $(function() {
 
 
 function setLnb(){
+	
 	var locationName = location['pathname'];
 	locationName = locationName.replace('/', '');
 	locationName = locationName.substring(0, locationName.lastIndexOf('.'));

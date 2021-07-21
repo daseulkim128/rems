@@ -1,5 +1,5 @@
 $(function() {
-	var membersModify = {
+	var memberDetail = {
 		init : function() {
 			
 			this.setEvent();
@@ -7,13 +7,13 @@ $(function() {
 		setEvent : function() {			
 			
 			$('#modifyBtn').on('click',function(){
-				location.href = "membersDetail.html";
+				common.movePage('memberModify');
 			});
 			
 			$('#cancelBtn').on('click',function(){
-				location.href = "members.html";
+				common.movePage('memberList');
 			});
 		}
 	};
-	membersModify.init();
+	memberDetail.init();
 });

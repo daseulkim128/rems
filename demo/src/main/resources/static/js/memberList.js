@@ -1,5 +1,5 @@
 $(function() {
-	var members = {
+	var memberList = {
 		init : function() {
 			this.setEvent();
 			
@@ -8,10 +8,10 @@ $(function() {
 		},
 		setEvent : function() {			
 			$('#registBtn').on('click', function(){
-				location.href ="membersRegist.html";
+				common.movePage('memberRegist');
 			});
 		}
 	};
-	members.init();
+	memberList.init();
 });
 

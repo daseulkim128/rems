@@ -37,6 +37,13 @@ $(function() {
 		/**
 		 * 데이터 테이블 옵션
 		 */
+		movePage : function(pageNm){
+			location.href = pageNm;
+		},
+		
+		/**
+		 * 데이터 테이블 옵션
+		 */
 		setTableOption : function(id){
 			
 			$('#'+id).DataTable( {
