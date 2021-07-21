@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>회원관리</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/fctsRegist.css" >
+	<link rel="stylesheet" type="text/css" href="css/common/common.css" >
+	<link rel="stylesheet" type="text/css" href="css/common/jquery-ui.css" >
+	<link rel="stylesheet" type="text/css" href="css/common/datatables.min.css" >
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 	<script src="js/common/jquery-ui.js" ></script>
+ 	<script src="js/common/datatables.min.js" ></script>
+   	<script type="text/javascript" src="js/dataTables/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" src="js/dataTables/jszip.min.js"></script>
+	<script type="text/javascript" src="js/dataTables/pdfmake.min.js"></script>
+	<script type="text/javascript" src="js/dataTables/vfs_fonts.js"></script>
+	<script type="text/javascript" src="js/dataTables/buttons.html5.min.js"></script>	
+ 	<script src="js/common/common.js" ></script>
+	<script src="js/fctsRegist.js" ></script>
+</head>
+<body>
+
+<div class="section">
+	
+	<div th:include="common/mngr-lnb.html"></div>
+
+	<div class="wrapper">
+		
+		<div class="header-wrapper" th:include="common/mngr-header.html"></div>
+		
+		<div class="content-wrap">
+			<div class="content">
+				<div class="table-wrap">
+					<div class="text-wrap">
+						<div class="left">
+							<div class="bar"></div>
+							<span class="text">회원 기본정보</span>
+						</div>
+					</div>
+					<table class="table table-bordered align-middle">
+						<colgroup>
+							<col width="15%"/>
+							<col width="35%" />
+							<col width="15%" />
+							<col width="35%" />
+						</colgroup>
+						<tbody>
+						   <tr>
+						     <th class="table-th">회원ID</th>
+						     <td><input class="form-control" type="text" aria-label="default input example"></td>
+						     <th class="table-th">회원상태</th>
+						     <td>
+						     	<select class="form-select">
+								  <option value="1">이용중</option>
+								</select>
+						     </td>
+						   </tr>
+						   <tr>
+						     <th class="table-th">사업자등록번호</th>
+						     <td><input class="form-control" type="text" aria-label="default input example"></td>
+						     <th class="table-th">상호명(법인명)</th>
+						     <td><input class="form-control" type="text" aria-label="default input example"></td>
+						   </tr>
+						   <tr>
+						    <th class="table-th">대표자명</th>
+						    <td><input class="form-control" type="text" aria-label="default input example"></td>
+						    <th class="table-th">휴대전화</th>
+						    <td>
+								<div class="input-group">
+							     	<select class="form-select">
+									  <option value="1">010</option>
+									  <option value="1">011</option>
+									  <option value="1">019</option>
+									  <option value="1">017</option>
+									</select>
+							     	<label class="input-group-text">-</label>
+							     	<input class="form-control" type="text" aria-label="default input example">
+							     	<label class="input-group-text">-</label>
+							     	<input class="form-control" type="text" aria-label="default input example">
+						     	</div>
+							</td>
+						   </tr>
+						   <tr>
+						     <th class="table-th">이메일</th>
+						     <td colspan="5"><input class="form-control" type="text" aria-label="default input example"></td>
+						   </tr>
+						 </tbody>
+					</table>
+				</div>
+				<div class="fcts-info">
+				
+					<div class="table-wrap">
+						<div class="text-wrap">
+							<div class="left">
+								<div class="bar"></div>
+								<span class="text">발전소 정보</span>
+							</div>
+							<div class="right">
+								 <button class="btn btn-outline-secondary" type="button" name="addFctsBtn">발전소 추가</button>
+						   		 <button class="btn btn-secondary" type="button" name="rmvFctsBtn">발전소 삭제</button>
+							</div>
+						</div>
+						<div class="accordion" id="accordionExample">
+						  <div class="accordion-item">
+						    <div class="accordion-header bd-bottom"  style="display: flex;" id="head_1">
+						    	<div class="left">
+						    		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						    	</div>
+						    	<div class="center">
+						    		<div class="form-check">
+									  <input class="form-control" type="text" aria-label="default input example" placeholder="발전소명을 입력해주세요">
+									</div>
+						    	</div>
+						    	<div class="right">
+						    		<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#list_1" aria-expanded="false" aria-controls="list_1">
+						      		</button>
+						    	</div>
+						    </div>
+						    <div id="list_1" class="accordion-collapse collapse show" aria-labelledby="head_1" >
+						      <div class="accordion-body">
+						        <table class="table align-middle mb-0">
+						        	<colgroup>
+						        		<col width="16%" />
+						        		<col width="17%" />
+						        		<col width="16%" />
+						        		<col width="17%" />
+						        		<col width="16%" />
+						        		<col width="18%" />
+						        	</colgroup>
+									<tbody>
+										<tr>
+									     <th class="table-th">발전소ID</th>
+									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
+									    
+										 <th class="table-th">대표발전소 여부</th>
+									     <td colspan="2">
+											<select class="form-select">
+											  <option value="1">Y</option>
+											  <option value="1">N</option>
+											</select>
+									     </td>
+									   </tr>
+									   <tr>
+									     <th class="table-th">용량(kW)</th>
+									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
+									     <th class="table-th">에너지원</th>
+									     <td colspan="2">
+									     	<select class="form-select">
+											  <option value="1">태양광</option>
+											  <option value="1">ESS</option>
+											</select>
+									     </td>
+									   </tr>
+									   <tr>
+									   	<th class="table-th">지역</th>
+									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
+									     <th class="table-th">주소</th>
+									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
+									   </tr>
+									 </tbody>
+								</table>
+								
+								<table class="table align-middle mb-0" name="invertor-table">
+						        	<colgroup>
+						        		<col width="16%" />
+						        		<col />
+						        	</colgroup>
+						        	<thead>
+										<tr>
+											<th class="table-invertor" colspan="2">
+												<div class="invertor-header">
+													<span></span>
+													<span>인버터 관리</span>
+													<button class="btn btn-sm btn-outline-dark pm-buttons" type="button" name="addInvertBtn">+</button>
+												</div>
+											
+												
+											</th>
+										</tr>
+						        	</thead>
+									<tbody name="invertor-body">
+									   <tr>
+									    <th class="table-th">인버터</th>
+									    <td colspan="1">
+									    	<div class="input-group">
+									    		<input class="form-control" type="text" aria-label="default input example">
+									    	</div>
+										</td>
+									   </tr>
+									 </tbody>
+								</table>
+						      </div>
+						    </div>
+						  </div>
+						  
+						  
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>
