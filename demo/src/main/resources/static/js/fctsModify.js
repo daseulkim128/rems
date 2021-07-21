@@ -2,7 +2,7 @@ var accordionItemHtml;
 var fctsListIdx = 1;
 
 $(function() {
-	var fctsRegist = {
+	var fctsModify = {
 		init : function() {
 			accordionItemHtml = $('#accordionExample').html();
 			
@@ -43,7 +43,7 @@ $(function() {
 			});
 		}
 	};
-	fctsRegist.init();
+	fctsModify.init();
 });
 
 function addInvertHtml(obj){
