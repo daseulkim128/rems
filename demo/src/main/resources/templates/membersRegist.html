@@ -52,24 +52,14 @@
 						<tbody>
 						   <tr>
 						     <th class="table-th">회원ID</th>
-						     <td><input class="form-control" type="text" aria-label="default input example"></td>
-						     <th class="table-th">회원상태</th>
-						     <td>
-						     	<select class="form-select">
-								  <option value="1">이용중</option>
-								</select>
-						     </td>
+						     <td colspan="3"><input class="form-control" type="text" aria-label="default input example"></td>
 						   </tr>
 						   <tr>
-						     <th class="table-th">사업자등록번호</th>
-						     <td><input class="form-control" type="text" aria-label="default input example"></td>
-						     <th class="table-th">상호명(법인명)</th>
-						     <td><input class="form-control" type="text" aria-label="default input example"></td>
+						     <th class="table-th">이름</th>
+						     <td colspan="3"><input class="form-control" type="text" aria-label="default input example"></td>
 						   </tr>
 						   <tr>
-						    <th class="table-th">대표자명</th>
-						    <td><input class="form-control" type="text" aria-label="default input example"></td>
-						    <th class="table-th">휴대전화</th>
+						    <th class="table-th">연락처</th>
 						    <td>
 								<div class="input-group">
 							     	<select class="form-select">
@@ -84,124 +74,23 @@
 							     	<input class="form-control" type="text" aria-label="default input example">
 						     	</div>
 							</td>
+							 <th class="table-th">이메일</th>
+						     <td><input class="form-control" type="email" aria-label="default input example"></td>
 						   </tr>
 						   <tr>
-						     <th class="table-th">이메일</th>
-						     <td colspan="5"><input class="form-control" type="text" aria-label="default input example"></td>
+						     <th class="table-th">회원상태</th>
+						     <td colspan="3">
+						     	<select class="form-select">
+								  <option value="1">이용중</option>
+								</select>
+						     </td>
 						   </tr>
 						 </tbody>
 					</table>
-				</div>
-				<div class="fcts-info">
-				
-					<div class="table-wrap">
-						<div class="text-wrap">
-							<div class="left">
-								<div class="bar"></div>
-								<span class="text">발전소 정보</span>
-							</div>
-							<div class="right">
-								 <button class="btn btn-outline-secondary" type="button" name="addFctsBtn">발전소 추가</button>
-						   		 <button class="btn btn-secondary" type="button" name="rmvFctsBtn">발전소 삭제</button>
-							</div>
-						</div>
-						<div class="accordion" id="accordionExample">
-						  <div class="accordion-item">
-						    <div class="accordion-header bd-bottom"  style="display: flex;" id="head_1">
-						    	<div class="left">
-						    		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-						    	</div>
-						    	<div class="center">
-						    		<div class="form-check">
-									  <input class="form-control" type="text" aria-label="default input example" placeholder="발전소명을 입력해주세요">
-									</div>
-						    	</div>
-						    	<div class="right">
-						    		<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#list_1" aria-expanded="false" aria-controls="list_1">
-						      		</button>
-						    	</div>
-						    </div>
-						    <div id="list_1" class="accordion-collapse collapse show" aria-labelledby="head_1" >
-						      <div class="accordion-body">
-						        <table class="table align-middle mb-0">
-						        	<colgroup>
-						        		<col width="16%" />
-						        		<col width="17%" />
-						        		<col width="16%" />
-						        		<col width="17%" />
-						        		<col width="16%" />
-						        		<col width="18%" />
-						        	</colgroup>
-									<tbody>
-										<tr>
-									     <th class="table-th">발전소ID</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
-									    
-										 <th class="table-th">대표발전소 여부</th>
-									     <td colspan="2">
-											<select class="form-select">
-											  <option value="1">Y</option>
-											  <option value="1">N</option>
-											</select>
-									     </td>
-									   </tr>
-									   <tr>
-									     <th class="table-th">용량(kW)</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
-									     <th class="table-th">에너지원</th>
-									     <td colspan="2">
-									     	<select class="form-select">
-											  <option value="1">태양광</option>
-											  <option value="1">ESS</option>
-											</select>
-									     </td>
-									   </tr>
-									   <tr>
-									   	<th class="table-th">지역</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
-									     <th class="table-th">주소</th>
-									     <td colspan="2"><input class="form-control" type="text" aria-label="default input example"></td>
-									   </tr>
-									 </tbody>
-								</table>
-								
-								<table class="table align-middle mb-0" name="invertor-table">
-						        	<colgroup>
-						        		<col width="16%" />
-						        		<col />
-						        	</colgroup>
-						        	<thead>
-										<tr>
-											<th class="table-invertor" colspan="2">
-												<div class="invertor-header">
-													<span></span>
-													<span>인버터 관리</span>
-													<button class="btn btn-sm btn-outline-dark pm-buttons" type="button" name="addInvertBtn">+</button>
-												</div>
-											
-												
-											</th>
-										</tr>
-						        	</thead>
-									<tbody name="invertor-body">
-									   <tr>
-									    <th class="table-th">인버터</th>
-									    <td colspan="1">
-									    	<div class="input-group">
-									    		<input class="form-control" type="text" aria-label="default input example">
-									    	</div>
-										</td>
-									   </tr>
-									 </tbody>
-								</table>
-						      </div>
-						    </div>
-						  </div>
-						  
-						  
-						</div>
+					<div class="btn-wrap">
+						<button class="btn btn-outline-secondary" type="button" id="registBtn">저장</button>
+					   	<button class="btn btn-secondary" type="button" id="cancelBtn">취소</button>
 					</div>
-					
 				</div>
 			</div>
 		</div>
