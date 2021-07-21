@@ -1,10 +1,10 @@
-package com.example.rems.service;
+package com.example.rems.common.service;
 
 import java.util.HashMap;
 
 import org.springframework.stereotype.Service;
 
-import com.example.rems.dao.TestDao;
+import com.example.rems.common.dao.TestDao;
 
 import lombok.RequiredArgsConstructor;
 

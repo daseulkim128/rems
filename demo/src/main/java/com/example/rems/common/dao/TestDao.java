@@ -1,4 +1,4 @@
-package com.example.rems.dao;
+package com.example.rems.common.dao;
 
 import java.util.HashMap;
 

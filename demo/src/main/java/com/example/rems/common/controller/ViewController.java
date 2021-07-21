@@ -1,4 +1,4 @@
-package com.example.rems.controller;
+package com.example.rems.common.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
